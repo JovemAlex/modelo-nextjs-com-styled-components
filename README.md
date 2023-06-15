@@ -39,7 +39,7 @@ Este projeto usa [`next/font`](https://nextjs.org/docs/basic-features/font-optim
 
 # Alterar estilos
 
-Para alterar ou adicionar estilos em sua aplicação, você pode usar o arquivo `src/styles/styles.tsx`
+Para alterar ou adicionar estilos em sua aplicação, você pode usar o arquivo `src/styles/styles.tsx`  
 _dentro do arquivo possui exemplos da sintaxe utilizada_
 
 Ao criar um componente é necessário que você exporte e depois importe o componente no aquivo onde será usado
