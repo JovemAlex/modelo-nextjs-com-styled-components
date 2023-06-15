@@ -1,8 +1,25 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Iniciando
 
-## Getting Started
+### Primeiro, crie um diretório com um nome desejado:
 
-First, run the development server:
+```bash
+mkdir my-app
+```
+
+### Acesse o repositório:
+
+```bash
+cd my-app
+```
+
+### Ainda no terminal, execute o comando:
+
+```bash
+npx create-next-app . -e https://github.com/JovemAlex/modelo-nextjs-com-styled-components
+```
+_Este comando irá criar uma aplicação Next.js com base no repositório mencionando após a flag `-e`_
+
+### Com a aplicação criada, agora basta executar os seguintes comando para rodar o servidor de desenvolvimento:
 
 ```bash
 npm run dev
@@ -12,23 +29,51 @@ yarn dev
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Servidor estando no ar:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Abra [http://localhost:3000](http://localhost:3000) com seu navegador para ver o resultado.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Você pode começar modificando a aplicação pelo arquivo `app/page.tsx`. A página irá atualizar automaticamente com as suas mudanças.
 
-## Learn More
+Este projeto usa [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) para otimizar e carregar automaticamente o Inter, uma fonte personalizada do Google.
 
-To learn more about Next.js, take a look at the following resources:
+# Alterar estilos
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Para alterar ou adicionar estilos em sua aplicação, você pode usar o arquivo `src/styles/styles.tsx`
+_dentro do arquivo possui exemplos da sintaxe utilizada_
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Ao criar um componente é necessário que você exporte e depois importe o componente no aquivo onde será usado
 
-## Deploy on Vercel
+A sintaxe para criação de um componente consiste em:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```javascript
+import styled from 'styled-components';
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+const [Nome do componente] = styled.[Tag HTML]`
+  [css padrão];
+`;
+
+// Exemplo
+
+const Title = styled.h1`
+  text-align: center;
+`;
+
+// Exportação
+//Caso tenha apenas um componente
+export default Title;
+
+// Vários componentes
+
+// 1
+export const Component...
+// 2
+export { Component1, Component2, Component3 }
+```
+
+## Decorator
+
+_⚠️ Para que a aplicação funcione com os estilos criados, é necessário que você coloque no topo do arquivo que está criando o Componente estilizado, o decorator  `'use client'`._
+
+
+
