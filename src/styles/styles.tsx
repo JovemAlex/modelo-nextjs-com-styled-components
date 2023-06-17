@@ -19,6 +19,8 @@ const Title = styled.h1`
 const Body = styled.body`
   margin: 0px;
   padding: 0px;
+  outline: none;
+  box-sizing: border-box;
 `;
 
 export { Title, Body, Container };
