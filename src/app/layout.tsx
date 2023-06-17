@@ -1,4 +1,4 @@
-import StyledComponentsRegistry from '../lib/registry';
+import StyledComponentsRegistry from './registry';
 import React from 'react';
 import { Body } from '@/styles/styles';
 import { Inter } from 'next/font/google';
